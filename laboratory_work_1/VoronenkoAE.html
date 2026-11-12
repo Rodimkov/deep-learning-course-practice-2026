@@ -7811,7 +7811,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
@@ -7845,7 +7845,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X_train</span> <span class="o">=</span> <span class="n">load_images</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">+</span> <span class="s2">"/train-images.idx3-ubyte"</span><span class="p">)</span>
@@ -7865,7 +7865,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>((60000, 28, 28), (60000,), (10000, 28, 28), (10000,))</pre>
 </div>
@@ -7888,7 +7888,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -7931,7 +7931,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [129]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X_train_norm</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="mi">255</span>
@@ -7966,7 +7966,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">NN</span><span class="p">:</span>
@@ -7982,9 +7982,7 @@ a.anchor-link {
         <span class="bp">self</span><span class="o">.</span><span class="n">Z1</span> <span class="o">=</span> <span class="n">X</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">W1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b1</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Z2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">H</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">W2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span>
-        <span class="n">Z_shift</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Z2</span>
-        <span class="c1">#Z_shift = self.Z2 - self.Z2.max(axis=1, keepdims=True)</span>
-        <span class="n">exp_Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">Z_shift</span><span class="p">)</span>
+        <span class="n">exp_Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Z2</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">Y_hat</span> <span class="o">=</span> <span class="n">exp_Z</span> <span class="o">/</span> <span class="n">exp_Z</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y_hat</span>
@@ -8033,7 +8031,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
@@ -8075,26 +8073,26 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Эпоха  1: ошибка на обучении = 0.0422, время = 7.6 с
-Эпоха  2: ошибка на обучении = 0.0270, время = 7.0 с
-Эпоха  3: ошибка на обучении = 0.0205, время = 6.6 с
-Эпоха  4: ошибка на обучении = 0.0153, время = 7.0 с
-Эпоха  5: ошибка на обучении = 0.0124, время = 6.8 с
-Эпоха  6: ошибка на обучении = 0.0085, время = 7.1 с
-Эпоха  7: ошибка на обучении = 0.0074, время = 8.0 с
-Эпоха  8: ошибка на обучении = 0.0100, время = 8.4 с
-Эпоха  9: ошибка на обучении = 0.0051, время = 8.1 с
-Эпоха 10: ошибка на обучении = 0.0031, время = 8.1 с
-Эпоха 11: ошибка на обучении = 0.0037, время = 8.2 с
-Эпоха 12: ошибка на обучении = 0.0023, время = 11.9 с
-Эпоха 13: ошибка на обучении = 0.0012, время = 9.8 с
-Эпоха 14: ошибка на обучении = 0.0012, время = 8.6 с
-Эпоха 15: ошибка на обучении = 0.0006, время = 8.4 с
-Эпоха 16: ошибка на обучении = 0.0007, время = 7.4 с
-Эпоха 17: ошибка на обучении = 0.0004, время = 7.3 с
-Эпоха 18: ошибка на обучении = 0.0002, время = 7.1 с
-Эпоха 19: ошибка на обучении = 0.0002, время = 7.2 с
-Эпоха 20: ошибка на обучении = 0.0002, время = 7.5 с
+<pre>Эпоха  1: ошибка на обучении = 0.0432, время = 23.5 с
+Эпоха  2: ошибка на обучении = 0.0292, время = 6.4 с
+Эпоха  3: ошибка на обучении = 0.0205, время = 6.1 с
+Эпоха  4: ошибка на обучении = 0.0152, время = 7.4 с
+Эпоха  5: ошибка на обучении = 0.0123, время = 6.9 с
+Эпоха  6: ошибка на обучении = 0.0087, время = 6.7 с
+Эпоха  7: ошибка на обучении = 0.0079, время = 6.8 с
+Эпоха  8: ошибка на обучении = 0.0062, время = 6.3 с
+Эпоха  9: ошибка на обучении = 0.0040, время = 6.2 с
+Эпоха 10: ошибка на обучении = 0.0052, время = 6.7 с
+Эпоха 11: ошибка на обучении = 0.0024, время = 6.0 с
+Эпоха 12: ошибка на обучении = 0.0015, время = 6.5 с
+Эпоха 13: ошибка на обучении = 0.0014, время = 7.0 с
+Эпоха 14: ошибка на обучении = 0.0011, время = 8.0 с
+Эпоха 15: ошибка на обучении = 0.0007, время = 6.2 с
+Эпоха 16: ошибка на обучении = 0.0007, время = 6.2 с
+Эпоха 17: ошибка на обучении = 0.0004, время = 6.3 с
+Эпоха 18: ошибка на обучении = 0.0003, время = 6.4 с
+Эпоха 19: ошибка на обучении = 0.0002, время = 6.3 с
+Эпоха 20: ошибка на обучении = 0.0002, время = 7.7 с
 </pre>
 </div>
 </div>
@@ -8116,7 +8114,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [130]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">test_error</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test_norm_reshaped</span><span class="p">)</span> <span class="o">==</span> <span class="n">y_test</span><span class="p">)</span>
@@ -8133,22 +8131,8 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Ошибка на тесте: 0.0195  (точность 98.05%)
+<pre>Ошибка на тесте: 0.0186  (точность 98.14%)
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5830f094">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
 </div>
 </div>
 </div>
