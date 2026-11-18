@@ -1,0 +1,7 @@
+torch>=2.7
+torchvision>=0.22
+numpy>=1.26
+matplotlib>=3.8
+notebook>=7
+nbconvert>=7
+ipykernel>=6
